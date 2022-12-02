@@ -1,0 +1,20 @@
+# Use a While Loop in Python to check if a String is a Palindrome
+
+a_string = 'Lepel'
+
+def palindrome(a_string):
+    a_string = a_string.lower().replace(' ', '')
+    first, last = 0, len(a_string) - 1
+
+    while(first < last):
+        if(a_string[first] == a_string[last]):
+            first += 1
+            last -= 1
+        else:
+            return False
+
+    return True
+
+print(palindrome(a_string))
+
+# Returns: True
